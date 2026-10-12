@@ -1,0 +1,2 @@
+import Link from 'next/link'
+export default function NotFound(){return <section className="min-h-screen px-6 flex flex-col items-center justify-center gap-8"><p className="text-mono text-white/40">404 / HIDEKI</p><h1 className="text-3xl font-light">Страница не найдена / Page not found</h1><div className="flex gap-8 text-mono"><Link href="/">Главная / Home ↗</Link><Link href="/work">Работы / Work ↗</Link></div></section>}

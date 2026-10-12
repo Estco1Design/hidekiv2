@@ -1,0 +1,4 @@
+ 'use client'
+import { site, safeContactUrl } from '@/data/site'
+import { useI18n } from '@/i18n/I18nProvider'
+export function ContactLinks(){const {language}=useI18n();const links=[{label:'INSTAGRAM',url:safeContactUrl(site.instagram,'instagram')},{label:'TELEGRAM',url:safeContactUrl(site.telegram,'telegram')},{label:'EMAIL',url:site.email&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(site.email)?`mailto:${site.email}`:''}].filter(l=>l.url);return <div className="flex flex-wrap gap-6 text-mono text-white/60">{links.map(l=><a key={l.label} href={l.url} target={l.url.startsWith('https')?'_blank':undefined} rel="noopener noreferrer" className="hover:text-white transition-colors">{l.label} ↗</a>)}<a href="/contact" className="hover:text-white">{language==='ru'?'Обсудить проект':'Discuss a project'} ↗</a></div>}

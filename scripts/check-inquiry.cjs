@@ -1,0 +1,23 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+const { stripTypeScriptTypes } = require('node:module');
+const source = fs.readFileSync('src/app/api/inquiry/route.ts', 'utf8');
+const compiled = stripTypeScriptTypes(source).replace("import { NextResponse } from 'next/server'", "const {NextResponse} = require('next/server')").replace(/export /g, '') + '\nexports.POST = POST';
+const env = {}; let calls = 0; let providerOk = true;
+const sandbox = { exports: {}, require, Request, AbortSignal, Map, Date, JSON, Number, Error, process: {env}, fetch: async () => { calls++; return {ok: providerOk, json: async () => ({ok: providerOk})} } };
+vm.runInNewContext(compiled, sandbox);
+const post = body => sandbox.exports.POST(new Request('http://localhost/api/inquiry', {method:'POST', headers:{'Content-Type':'application/json','x-forwarded-for':'127.0.0.2'},body:JSON.stringify(body)}));
+const valid = {name:'QA',contact:'qa@example.test',consent:true,message:'QA only'};
+(async()=>{
+ assert.equal((await post({...valid, consent:false})).status, 400);
+ assert.equal((await post({...valid, message:'x'.repeat(2501)})).status,400);
+ assert.equal((await post({...valid, website:'spam'})).status,400);
+ assert.equal((await post(valid)).status,503); assert.equal(calls,0);
+ env.TELEGRAM_BOT_TOKEN='mock'; env.TELEGRAM_CHAT_ID='mock';
+ assert.equal((await post(valid)).status,200); assert.equal(calls,1);
+ providerOk=false; assert.equal((await post(valid)).status,502);providerOk=true;
+ for(let i=0;i<3;i++)assert.equal((await post(valid)).status,200);
+ assert.equal((await post(valid)).status,429);
+ console.log('PASS: validation, honeypot, missing config, mocked delivery, provider failure, rate limit. No real messages sent.');
+})().catch(e=>{console.error(e);process.exitCode=1});

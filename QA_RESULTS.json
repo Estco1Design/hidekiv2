@@ -1,0 +1,84 @@
+{
+  "pages": [
+    [
+      "/",
+      200
+    ],
+    [
+      "/work",
+      200
+    ],
+    [
+      "/studio",
+      200
+    ],
+    [
+      "/about",
+      200
+    ],
+    [
+      "/contact",
+      200
+    ],
+    [
+      "/shop",
+      200
+    ],
+    [
+      "/archive",
+      200
+    ],
+    [
+      "/work/echoes-of-silence",
+      200
+    ],
+    [
+      "/work/shadow-ritual",
+      200
+    ],
+    [
+      "/work/void-portraits",
+      200
+    ],
+    [
+      "/work/neural-dreams",
+      200
+    ],
+    [
+      "/work/concrete-garden",
+      200
+    ],
+    [
+      "/work/motion-study-001",
+      200
+    ],
+    [
+      "/shop/object-001",
+      200
+    ],
+    [
+      "/shop/object-002",
+      200
+    ],
+    [
+      "/shop/object-003",
+      200
+    ],
+    [
+      "/unknown",
+      404
+    ],
+    [
+      "/work/unknown",
+      404
+    ],
+    [
+      "/shop/unknown",
+      404
+    ]
+  ],
+  "uiChecks": 11,
+  "runtimeErrors": [],
+  "telegramLiveDelivery": "not tested; credentials missing",
+  "videoFixture": "temporary QA asset; not included in project"
+}

@@ -1,0 +1,247 @@
+[
+  {
+    "upload_path": "public/media/about/founder-fashion.jpg",
+    "url": "/media/about/founder-fashion.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/about/founder-visual.jpg",
+    "url": "/media/about/founder-visual.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/hero/hero-poster.jpg",
+    "url": "/media/hero/hero-poster.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/hero/hero.mp4",
+    "url": "/media/hero/hero.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/hero/main.mp4",
+    "url": "/media/hero/main.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/placeholder.svg",
+    "url": "/media/placeholder.svg",
+    "included": true
+  },
+  {
+    "upload_path": "public/media/projects/concrete/cover.jpg",
+    "url": "/media/projects/concrete/cover.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/concrete/img-01.jpg",
+    "url": "/media/projects/concrete/img-01.jpg",
+    "included": true
+  },
+  {
+    "upload_path": "public/media/projects/concrete/img-02.jpg",
+    "url": "/media/projects/concrete/img-02.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/concrete/img-03.jpg",
+    "url": "/media/projects/concrete/img-03.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/concrete/video-01.mp4",
+    "url": "/media/projects/concrete/video-01.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/echoes/cover.jpg",
+    "url": "/media/projects/echoes/cover.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/echoes/cover.mp4",
+    "url": "/media/projects/echoes/cover.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/echoes/img-01.jpg",
+    "url": "/media/projects/echoes/img-01.jpg",
+    "included": true
+  },
+  {
+    "upload_path": "public/media/projects/echoes/img-02.jpg",
+    "url": "/media/projects/echoes/img-02.jpg",
+    "included": true
+  },
+  {
+    "upload_path": "public/media/projects/echoes/img-03.jpg",
+    "url": "/media/projects/echoes/img-03.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/echoes/img-04.jpg",
+    "url": "/media/projects/echoes/img-04.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/echoes/video-01.mp4",
+    "url": "/media/projects/echoes/video-01.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/echoes/video-02.mp4",
+    "url": "/media/projects/echoes/video-02.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/motion/cover.jpg",
+    "url": "/media/projects/motion/cover.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/motion/cover.mp4",
+    "url": "/media/projects/motion/cover.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/motion/video-01.mp4",
+    "url": "/media/projects/motion/video-01.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/motion/video-02.mp4",
+    "url": "/media/projects/motion/video-02.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/neural/cover.jpg",
+    "url": "/media/projects/neural/cover.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/neural/cover.mp4",
+    "url": "/media/projects/neural/cover.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/neural/img-01.jpg",
+    "url": "/media/projects/neural/img-01.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/neural/img-02.jpg",
+    "url": "/media/projects/neural/img-02.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/neural/video-01.mp4",
+    "url": "/media/projects/neural/video-01.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/shadow/cover.jpg",
+    "url": "/media/projects/shadow/cover.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/shadow/img-01.jpg",
+    "url": "/media/projects/shadow/img-01.jpg",
+    "included": true
+  },
+  {
+    "upload_path": "public/media/projects/shadow/img-02.jpg",
+    "url": "/media/projects/shadow/img-02.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/shadow/img-03.jpg",
+    "url": "/media/projects/shadow/img-03.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/shadow/video-01.mp4",
+    "url": "/media/projects/shadow/video-01.mp4",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/void/cover.jpg",
+    "url": "/media/projects/void/cover.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/void/img-01.jpg",
+    "url": "/media/projects/void/img-01.jpg",
+    "included": true
+  },
+  {
+    "upload_path": "public/media/projects/void/img-02.jpg",
+    "url": "/media/projects/void/img-02.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/void/img-03.jpg",
+    "url": "/media/projects/void/img-03.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/projects/void/img-04.jpg",
+    "url": "/media/projects/void/img-04.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-001/back.jpg",
+    "url": "/media/shop/object-001/back.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-001/detail.jpg",
+    "url": "/media/shop/object-001/detail.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-001/front.jpg",
+    "url": "/media/shop/object-001/front.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-001/side.jpg",
+    "url": "/media/shop/object-001/side.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-002/back.jpg",
+    "url": "/media/shop/object-002/back.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-002/detail.jpg",
+    "url": "/media/shop/object-002/detail.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-002/front.jpg",
+    "url": "/media/shop/object-002/front.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-002/side.jpg",
+    "url": "/media/shop/object-002/side.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-003/back.jpg",
+    "url": "/media/shop/object-003/back.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-003/front.jpg",
+    "url": "/media/shop/object-003/front.jpg",
+    "included": false
+  },
+  {
+    "upload_path": "public/media/shop/object-003/side.jpg",
+    "url": "/media/shop/object-003/side.jpg",
+    "included": false
+  }
+]
