@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "check": "Home + intro completion",
+      "status": "passed"
+    },
+    {
+      "check": "Intro orbit visible + skip releases page",
+      "status": "passed"
+    },
+    {
+      "check": "3D model + measurement selection + keyboard rotation",
+      "status": "passed"
+    },
+    {
+      "check": "Anonymous measurements access denied",
+      "status": "passed"
+    },
+    {
+      "check": "Account registration + server save + reload persistence",
+      "status": "passed"
+    },
+    {
+      "check": "Language switch preserves unsaved measurements",
+      "status": "passed"
+    },
+    {
+      "check": "Measurement validation + cross-origin write denied",
+      "status": "passed"
+    },
+    {
+      "check": "Cross-account measurement isolation",
+      "status": "passed"
+    },
+    {
+      "check": "Registration does not grant private access",
+      "status": "passed"
+    },
+    {
+      "check": "Sign out revokes access + sign in",
+      "status": "passed"
+    },
+    {
+      "check": "Shop filters + size selection + inquiry prefill",
+      "status": "passed"
+    },
+    {
+      "check": "Consent + delivery failure preserves brief + copy",
+      "status": "passed"
+    },
+    {
+      "check": "All existing page families render",
+      "status": "passed"
+    },
+    {
+      "check": "404 response",
+      "status": "passed"
+    },
+    {
+      "check": "No uncaught browser exceptions",
+      "status": "passed"
+    },
+    {
+      "check": "Mobile layouts + menu + reduced motion",
+      "status": "passed"
+    }
+  ],
+  "browser_errors": []
+}

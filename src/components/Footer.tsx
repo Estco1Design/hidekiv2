@@ -10,7 +10,7 @@ interface FooterProps {
 }
 
 export function Footer({ showShopPreview = true }: FooterProps) {
-  const { t } = useI18n()
+  const { t, language } = useI18n()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -100,7 +100,7 @@ export function Footer({ showShopPreview = true }: FooterProps) {
           </Reveal>
         </div>
 
-        <div><ContactLinks /><a href="/archive" className="block text-mono text-white/50 mt-6">{t('shop.archive')}</a></div>
+        <div><ContactLinks /><a href="/account" className="block text-mono text-white/60 mt-6">{t('nav.account')}</a><a href="/private" className="block text-mono text-white/60 mt-4">{language==='ru'?'За кадром':'Behind the frame'}</a><a href="/privacy" className="block text-mono text-white/60 mt-4">{language==='ru'?'Данные и приватность':'Data & privacy'}</a><a href="/archive" className="block text-mono text-white/50 mt-6">{t('shop.archive')}</a></div>
       </div>
 
       {/* Copyright */}

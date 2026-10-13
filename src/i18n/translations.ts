@@ -2,6 +2,7 @@ export const translations = {
   en: {
     // Navigation
     nav: {
+      account: 'ACCOUNT',
       work: 'WORK',
       studio: 'STUDIO',
       about: 'ABOUT',
@@ -162,10 +163,11 @@ export const translations = {
   ru: {
     // Navigation
     nav: {
+      account: 'ЛИЧНЫЙ КАБИНЕТ',
       work: 'РАБОТЫ',
       studio: 'СТУДИЯ',
       about: 'О НАС',
-      shop: 'ОБЪЕКТЫ',
+      shop: 'МАГАЗИН',
       contact: 'КОНТАКТЫ',
     },
     // Home Page

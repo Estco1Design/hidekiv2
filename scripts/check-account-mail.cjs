@@ -1,0 +1,7 @@
+const assert = require('node:assert/strict')
+const fs = require('node:fs')
+const vm = require('node:vm')
+const {stripTypeScriptTypes} = require('node:module')
+const source=stripTypeScriptTypes(fs.readFileSync('src/lib/mail.ts','utf8')).replace('import "server-only";','').replace(/export /g,'')+'\nexports.sendAccountEmail=sendAccountEmail'
+function setup(configured,ok=true){let calls=0;const sandbox={exports:{},process:{env:configured?{RESEND_API_KEY:'mock-test-key',HIDEKI_EMAIL_FROM:'test@example.test',BETTER_AUTH_URL:'http://localhost:3000'}:{}},URL,AbortSignal,JSON,Error,fetch:async()=>{calls++;return {ok}}};vm.runInNewContext(source,sandbox);return {send:sandbox.exports.sendAccountEmail,calls:()=>calls}}
+(async()=>{const missing=setup(false);await assert.rejects(missing.send('qa@example.test','http://localhost:3000/verify','verify'));assert.equal(missing.calls(),0);const valid=setup(true);await assert.rejects(valid.send('qa@example.test','https://attacker.example/reset','reset'));assert.equal(valid.calls(),0);await valid.send('qa@example.test','http://localhost:3000/reset-password?token=mock','reset');assert.equal(valid.calls(),1);const failure=setup(true,false);await assert.rejects(failure.send('qa@example.test','http://localhost:3000/verify','verify'));console.log('PASS: missing mail config, link origin validation, mocked delivery and provider failure. No real emails sent.')})().catch(e=>{console.error(e);process.exitCode=1})

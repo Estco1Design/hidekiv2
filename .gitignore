@@ -83,3 +83,7 @@ Thumbs.db
 *.tar.xz
 *.tar.zst
 ```
+# Local authentication database and development credentials
+.local/
+
+!.env.example

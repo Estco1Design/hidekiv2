@@ -14,12 +14,7 @@ export const products: Product[] = [
       { label: '03', measurements: 'By arrangement / По согласованию' },
     ],
     materials: ['Three-thread sweatshirt fabric / Футер трёхнитка'],
-    images: [
-      '/media/shop/object-001/front.jpg',
-      '/media/shop/object-001/side.jpg',
-      '/media/shop/object-001/back.jpg',
-      '/media/shop/object-001/detail.jpg',
-    ],
+    images: ['/media/shop/object-001/design.svg'],
     description: 'Первый чёрный лук HIDEKI: футболка и шорты из трёхниточного футера. Разработку, посадку и изготовление обсуждаем индивидуально.',
     isLimited: false,
   },
