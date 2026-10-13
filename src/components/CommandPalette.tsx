@@ -15,7 +15,8 @@ const navItems = [
   { label: 'WORK', href: '/work', shortcut: 'W' },
   { label: 'STUDIO', href: '/studio', shortcut: 'S' },
   { label: 'SHOP', href: '/shop', shortcut: 'O' },
-  { label: 'ARCHIVE', href: '/archive', shortcut: 'A' },
+  { label: 'ЛИЧНЫЙ КАБИНЕТ', href: '/account', shortcut: 'A' },
+  { label: 'ЗА КАДРОМ', href: '/private', shortcut: 'P' },
   { label: 'ABOUT', href: '/about', shortcut: 'B' },
   { label: 'CONTACT', href: '/contact', shortcut: 'C' },
 ]
@@ -70,10 +71,10 @@ export function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
             <input
               ref={inputRef}
               type="text"
-              placeholder="Search projects or navigate..."
+              aria-label="Поиск проектов" placeholder="Найти проект…"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-transparent text-text-secondary text-lg outline-none placeholder:text-text-primary/40"
+              className="w-full bg-transparent text-text-secondary text-lg placeholder:text-text-primary/40"
             />
           </div>
 

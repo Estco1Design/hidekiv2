@@ -1,0 +1,21 @@
+{
+  "browser_checks_passed": 16,
+  "uncaught_browser_errors": 0,
+  "typecheck": "passed",
+  "production_build": "passed / Next.js 16.4.0",
+  "inquiry_tests": "passed / mock Telegram",
+  "private_access_tests": "passed",
+  "account_mail_tests": "passed / mock Resend",
+  "frozen_install": "passed with writable caches",
+  "auth_migration_repeatability": "passed",
+  "dependency_audit_known_vulnerabilities": 0,
+  "seo_scope": "7 local pages / no Core Web Vitals",
+  "unverified": [
+    "real Telegram delivery",
+    "real Resend delivery",
+    "production deployment",
+    "verified portfolio and press sources",
+    "payments",
+    "private client file storage"
+  ]
+}

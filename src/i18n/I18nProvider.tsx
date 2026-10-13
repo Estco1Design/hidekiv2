@@ -29,7 +29,7 @@ function getNestedValue(obj: TranslationValue, keyPath: string): string {
 }
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('en')
+  const [language, setLanguageState] = useState<Language>('ru')
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {

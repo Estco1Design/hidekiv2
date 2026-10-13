@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { clsx } from 'clsx'
 import { SafeImage } from './SafeImage'
+import assets from '@/data/media-assets.json'
+const localAssets = new Set(assets)
 interface SmartMediaProps {
  src: string; alt?: string; priority?: boolean; className?: string; type?: 'image' | 'video';
  autoPlay?: boolean; loop?: boolean; muted?: boolean; poster?: string; playsInline?: boolean;
@@ -21,6 +23,6 @@ export function SmartMedia({src, alt='', priority=false, className, type='image'
   obs.observe(wrapper.current);return()=>obs.disconnect()
  },[autoPlay,reduced,onVisible])
  return <div ref={wrapper} className={clsx('w-full h-full overflow-hidden bg-bg-tertiary media-frame',className)} style={{aspectRatio}}>
-  {type==='video' && visible && !failed ? <video ref={video} src={src} className="w-full h-full object-cover" autoPlay={autoPlay && !reduced} loop={loop} muted={muted} playsInline={playsInline} preload={priority?'auto':'metadata'} poster={poster || '/media/placeholder.svg'} controls={controls || reduced} onLoadedData={onLoad} onError={()=>setFailed(true)} /> : <SafeImage src={type==='video' ? poster || '/media/placeholder.svg' : src} alt={alt} className="w-full h-full object-cover" loading={priority?'eager':'lazy'} decoding="async" onLoad={onLoad} />}
+  {type==='video' && visible && !failed && (!src.startsWith('/') || localAssets.has(src)) ? <video ref={video} src={src} className="w-full h-full object-cover" autoPlay={autoPlay && !reduced} loop={loop} muted={muted} playsInline={playsInline} preload={priority?'auto':'metadata'} poster={poster || '/media/placeholder.svg'} controls={controls || reduced} onLoadedData={onLoad} onError={()=>setFailed(true)} /> : <SafeImage src={type==='video' ? poster || '/media/placeholder.svg' : src} alt={alt} className="w-full h-full object-cover" loading={priority?'eager':'lazy'} decoding="async" onLoad={onLoad} />}
  </div>
 }

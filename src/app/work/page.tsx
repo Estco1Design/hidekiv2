@@ -1,7 +1,7 @@
 'use client'
 import { SafeImage } from '@/components/SafeImage'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { SmartMedia } from '@/components/SmartMedia'
 import { Reveal } from '@/components/Reveal'
@@ -17,6 +17,24 @@ export default function WorkPage() {
   const [activeCategory, setActiveCategory] = useState('ALL')
   const categories = getAllCategories()
   const filteredProjects = getProjectsByCategory(activeCategory)
+  useEffect(() => {
+    const sync = () => {
+      const params = new URLSearchParams(window.location.search)
+      const category = params.get('category') || 'ALL'
+      setActiveCategory(getAllCategories().includes(category) ? category : 'ALL')
+      setViewMode(params.get('view') === 'INDEX' ? 'INDEX' : 'VISUAL')
+    }
+    sync(); window.addEventListener('popstate', sync)
+    return () => window.removeEventListener('popstate', sync)
+  }, [])
+  function updateUrl(category: string, view: ViewMode) {
+    const url = new URL(window.location.href)
+    url.searchParams.set('category', category); url.searchParams.set('view', view)
+    window.history.replaceState(null, '', url)
+  }
+  function changeCategory(category: string) { setActiveCategory(category); updateUrl(category, viewMode) }
+  function changeView(view: ViewMode) { setViewMode(view); updateUrl(activeCategory, view) }
+
 
   const getCategoryLabel = (category: string) => {
     const categoryMap: Record<string, string> = {
@@ -48,7 +66,7 @@ export default function WorkPage() {
             {/* View Mode Toggle */}
             <div className="flex items-center gap-4">
               <button
-                onClick={() => setViewMode('INDEX')}
+                aria-pressed={viewMode === 'INDEX'} onClick={() => changeView('INDEX')}
                 className={`text-mono uppercase tracking-[0.15em] transition-colors ${
                   viewMode === 'INDEX'
                     ? 'text-text-secondary'
@@ -60,7 +78,7 @@ export default function WorkPage() {
               </button>
               <span className="text-text-primary/30">/</span>
               <button
-                onClick={() => setViewMode('VISUAL')}
+                aria-pressed={viewMode === 'VISUAL'} onClick={() => changeView('VISUAL')}
                 className={`text-mono uppercase tracking-[0.15em] transition-colors ${
                   viewMode === 'VISUAL'
                     ? 'text-text-secondary'
@@ -77,7 +95,7 @@ export default function WorkPage() {
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={() => setActiveCategory(category)}
+                  aria-pressed={activeCategory === category} onClick={() => changeCategory(category)}
                   className={`text-mono text-xs-custom transition-colors ${
                     activeCategory === category
                       ? 'text-text-secondary'

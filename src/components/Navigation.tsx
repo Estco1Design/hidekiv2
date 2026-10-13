@@ -19,6 +19,7 @@ const navItems: NavItem[] = [
   { labelKey: 'nav.about', href: '/about' },
   { labelKey: 'nav.shop', href: '/shop' },
   { labelKey: 'nav.contact', href: '/contact' },
+  { labelKey: 'nav.account', href: '/account' },
 ]
 
 interface NavigationProps {
@@ -95,7 +96,7 @@ export function Navigation({ theme = 'dark', hidden = false }: NavigationProps) 
       <nav
         ref={navRef}
         className={clsx(
-          'fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-6 md:py-8 transition-all duration-500',
+          'fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-6 md:py-8 transition-[background-color,opacity] duration-500',
           scrolled && 'bg-bg-primary/80 backdrop-blur-sm',
           hidden && 'opacity-0 pointer-events-none'
         )}
@@ -113,7 +114,7 @@ export function Navigation({ theme = 'dark', hidden = false }: NavigationProps) 
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-5">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -127,7 +128,7 @@ export function Navigation({ theme = 'dark', hidden = false }: NavigationProps) 
                 {t(item.labelKey)}
                 <span
                   className={clsx(
-                    'absolute -bottom-1 left-0 h-[1px] transition-all duration-300',
+                    'absolute -bottom-1 left-0 h-[1px] transition-[width] duration-300',
                     isDark ? 'bg-white' : 'bg-text-primary',
                     pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
                   )}
@@ -138,7 +139,7 @@ export function Navigation({ theme = 'dark', hidden = false }: NavigationProps) 
             <button
               onClick={toggleLanguage}
               className={clsx(
-                'text-xs-custom transition-colors',
+                'text-xs-custom transition-colors min-h-11 min-w-11',
                 textColor
               )}
               data-hover="true"
@@ -152,13 +153,13 @@ export function Navigation({ theme = 'dark', hidden = false }: NavigationProps) 
             {/* Language Switcher for Mobile */}
             <button
               onClick={toggleLanguage}
-              className={clsx('text-xs-custom', textColor)}
+              className={clsx('text-xs-custom min-h-11 min-w-11', textColor)}
               data-hover="true"
             >
               {language.toUpperCase()}
             </button>
             <button
-              className={clsx('z-50', textColor)}
+              className={clsx('z-50 min-h-11 min-w-11 flex items-center justify-center', textColor)}
               onClick={toggleMobileMenu}
               aria-label={language === 'ru' ? 'Меню' : 'Menu'}
               aria-expanded={mobileMenuOpen}

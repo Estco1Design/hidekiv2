@@ -1,0 +1,62 @@
+[
+  {
+    "name": "frontend-design",
+    "source": "https://github.com/anthropics/skills.git",
+    "path": "skills/frontend-design",
+    "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44"
+  },
+  {
+    "name": "web-design-guidelines",
+    "source": "https://github.com/vercel-labs/agent-skills.git",
+    "path": "skills/web-design-guidelines",
+    "commit": "063bee94c3f4df8453406c830b0a7df0f2860278"
+  },
+  {
+    "name": "vercel-react-best-practices",
+    "source": "https://github.com/vercel-labs/agent-skills.git",
+    "path": "skills/react-best-practices",
+    "commit": "063bee94c3f4df8453406c830b0a7df0f2860278"
+  },
+  {
+    "name": "vercel-composition-patterns",
+    "source": "https://github.com/vercel-labs/agent-skills.git",
+    "path": "skills/composition-patterns",
+    "commit": "063bee94c3f4df8453406c830b0a7df0f2860278"
+  },
+  {
+    "name": "framer-motion",
+    "source": "https://github.com/Schoepplake/framer-motion-skill.git",
+    "path": "skills/framer-motion",
+    "commit": "1d984d5db13b3fe30edef3f3a5d88dba588a10b7"
+  },
+  {
+    "name": "better-auth-best-practices",
+    "source": "https://github.com/better-auth/skills.git",
+    "path": "better-auth/best-practices",
+    "commit": "20c9e88a5c007461a703f1c213572b073196113e"
+  },
+  {
+    "name": "security-best-practices",
+    "source": "https://github.com/openai/skills.git",
+    "path": "skills/.curated/security-best-practices",
+    "commit": "49f948faa9258a0c61caceaf225e179651397431"
+  },
+  {
+    "name": "webapp-testing",
+    "source": "https://github.com/anthropics/skills.git",
+    "path": "skills/webapp-testing",
+    "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44"
+  },
+  {
+    "name": "seo-audit",
+    "source": "https://github.com/seo-skills/seo-audit-skill.git",
+    "path": "skill",
+    "commit": "479208b92e3b30e64d2188937dd7696ec162f019"
+  },
+  {
+    "name": "supabase-postgres-best-practices",
+    "source": "https://github.com/supabase/agent-skills.git",
+    "path": "skills/supabase-postgres-best-practices",
+    "commit": "c9be0e931b7930f7d02126d04774d904c381e7d7"
+  }
+]
